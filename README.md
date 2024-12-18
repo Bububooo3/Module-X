@@ -12,15 +12,15 @@ This line of code is necessary before you can call anything from the module.
 Obviously, this can be optimized, though it is not used often.
 
 ```lua
-local version = require(script.Parent:WaitForChild("Module-X"))
+local ModuleX = require(script.Parent:WaitForChild("Module-X"))
  ```
 After requiring the module, you will want to choose an instance and assign a variable to `version.createGhost()` and put your **[Instance](https://create.roblox.com/docs/reference/engine/datatypes/Instance)** in between the two parentheses. The new variable is called the **ghost** *(As in the ghost of the original part)*. *See Figure 1 below*
 ```lua
 -- Figure 1
-local version = require(script.Parent:WaitForChild("Module-X"))
+local ModuleX = require(script.Parent:WaitForChild("Module-X"))
 
 local part = Instance.new("Part")
-local partGhost = version.createGhost(part)
+local partGhost = ModuleX.createGhost(part)
 ```
 Understand that a ghost provides extra features for the instance it is linked to. It is not an instance in itself, so you cannot parent things to the ghost.
 
